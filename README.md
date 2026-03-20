@@ -1,52 +1,109 @@
-# z‑Tool – File Scanner  
-*For entairnement and educational purposes only*  
-
-## 📖 Overview | Aperçu (français)
-
-z‑Tool is a lightweight Python multitool focused on osint and other things .  
 
 
 ---
 
-## 🛠️ What each tool does
+# z-Tool – Python Multitool
 
-Below is a **quick‑reference table** that maps every menu entry (01 – 30) to the feature it launches, a one‑liner description and a short “how‑to‑use” note (what you have to type or what arguments are expected).
+**Educational & entairnement purposes only**
 
-| # | Feature | Short Description | How To Use |
-|---|---------|--------------------|------------|
-| 01 | **IP Info** | Shows geolocation, ASN & hostname for a given IP address. | `./feature_01.py <ip>` (or run from the menu and type an IP). |
-| 02 | **DDOS Attack** | Simple script to send UDP packets at high speed to flood a target host. | `python ddos_attack.py <host> <port> <threads>` – hit *Enter* after each input. |
-| 03 | **Link Grabber** | Extracts all URLs from the clipboard or a supplied text file. | `link_grabber.py` → paste/clips or give `-f path/to/file.txt`. |
-| 04 | **Phishing Twitter** | Generates a fake “follow” link to trick a target into visiting. | Run the script; enter target’s handle, copy the generated URL. |
-| 05 | **Phishing Instagram** | Builds an Instagram “login” phishing page (simple HTML template). | `insta_phish.py` → follow prompts for victim username, output folder. |
-| 06 | **Mini Rat!** | Small RAT skeleton that opens a reverse shell to the attacker. | Launch via menu; choose IP:port of your listener.not working well |
-| 07 | **Nitro Generator** | Generates random Discord Nitro codes (10‑character). | `nitro_gen.py` – outputs a list in console or file. |
-| 08 | **Bot Deleter (Discord)** | Removes all bots from a selected server using the Discord API. | Requires a token → enter it when prompted; choose guild ID. |
-| 09 | **Stealer (ngrok)** | Packs stolen credentials into an ngrok tunnel for remote retrieval. | `stealer_ngrok.py` – start, copy ngrok URL, give to victim. |
-| 10 | **Stealer (Discord)** | Exfiltrates Discord token & messages via a webhook or local file. | `stealer_discord.py` → choose output method. |
-| 11 | **Username Tracker** | Looks up usernames on several services (GitHub, Twitter, etc.). | `user_tracker.py <username>` – prints service matches. |
-| 12 | **Phone tracker** | Queries carrier API for phone number info (carrier name, country). | `phone_tracker.py <+number>` → shows details. |
-| 13 | **Email tracker** | Resolves email domains to MX records & provider info. | `email_tracker.py <address@example.com>`. |
-| 14 | **ID tracker** | Fetches public profile data from LinkedIn / X (Twitter). | `id_tracker.py <handle>` – displays name, title. |
-| 15 | **Bot‑Controlleur** | Simple CLI to start/stop a Discord bot instance on demand. | `bot_controller.py` → select action, provide token. |
-| 16 | **Metadata for image** | Reads EXIF data from images (camera model, GPS). | `meta_image.py <path/to/image.jpg>`. |
-| 17 | **Create Report** | Formats scan results into a readable PDF/HTML report. | `create_report.py <json_file>` → outputs `report.pdf`. |
-| 18 | **Google Dork** | Builds Google search queries to find public data (e.g., file types). | `google_dork.py` → enter keyword & extension. |
-| 19 | **TechInt (option)** | Tech‑intelligence gathering: fetches OS info, open ports of a target. | `tech_int.py <ip>` – prints OS guess + port list. |
-| 20 | **Directory Fuzzer** | Brute‑forces directories on a web server to discover hidden paths. | `dir_fuzz.py <url> <wordlist.txt>` → shows hits. |
-| 21 | **XSS Search** | Scans URLs for stored/reflective XSS vulnerabilities. | `xss_search.py <url>` – prints vulnerable parameters. |
-| 22 | **SQL Search** | Looks for SQL injection points in a web form or URL. | `sql_search.py <url>` – shows possible injection vectors. |
-| 23 | **Vulnerability Search** | Queries public CVE databases based on OS/Software version. | `vuln_search.py <product> <version>`. |
-| 24 | **Scanner Web** | Full‑page scanner: fetches HTML, finds hidden files/dirs & XSS/SQL injection. | `web_scanner.py <url>` → prints results. |
-| 25 | **Alt-Scan** | Wrapper that runs all the “Alt” utilities (1–24) in one go. | `alt_scan.py` – choose which group to run. |
-| 26 | **Wifi‑Scanner** | Scans local Wi‑Fi networks and shows SSID, BSSID & signal strength. | `wifi_scanner.py` → outputs list of APs. |
-| 27 | **FireWall Search** | Checks if a host’s firewall blocks common ports (80/443/22). | `firewall_search.py <ip>` – prints open/closed status. |
-| 28 | **File Scan** | Runs the *AntivirusScanner* on a file (same as `main.py`). | `file_scan.py <path/to/file>` – prints risk report. |
-| 29 | **Update** | Pulls the latest changes from the Git repo and restarts if needed. | `update_tool.py` → auto‑updates scripts. |
-| 30 | **Contact** | Shows contact information for support / author. | `contact_info.py` – prints Discord, email, etc. |
+---
+
+## 📖 Overview
+
+**z-Tool** is a Python-based multitool that groups several utilities related to:
+
+* OSINT (Open-Source Intelligence)
+* basic network analysis
+* website information gathering
+* data inspection tools
+
+The goal of the project is to **experiment with Python, networking, and automation** while learning how different security-related utilities work in practice.
+
+This project is primarily intended for **learning, experimentation, and terminal-based workflows**.
+
+---
+
+## 🧰 Tool List
+
+Below is a quick overview of the features currently available in **z-Tool**.
+Got it. Since these are the **actual 30 menu items in your script**, I’ll rewrite a **clean README section** that matches them exactly. I’ll keep it **clear, professional, and GitHub-friendly** without adding unsafe instructions.
+
+You can replace your current **tool table** with this.
+
+---
+
+# 🧰 Tool List
+
+z-Tool contains **30 utilities** organized into three categories:
+
+## 📂 Tool Categories
+
+### ⚔️ Attack
+
+Modules focused on network interaction and experimental demonstrations.
+
+### 🔎 OSINT
+
+Tools used to gather publicly available information.
+
+### 🛡️ Pentest
+
+Utilities designed to test and analyze security configurations.
+
+---
+
+Below is a quick description of each module.
+
+| #      | Tool                  | Category | Description                                                                                    |
+| ------ | --------------------- | -------- | ---------------------------------------------------------------------------------------------- |
+| **01** | IP Info               | Attack   | Retrieves information about an IP address and can perform a basic port scan.                   |
+| **02** | DDOS Attack           | Attack   | Sends large numbers of HTTP requests to test server stability and response handling.           |
+| **03** | Link Grabber          | Attack   | Generates a link capable of collecting visitor network information.                            |
+| **04** | Phishing Twitter      | Attack   | Demonstration login page styled after Twitter/X for educational testing environments.          |
+| **05** | Phishing Instagram    | Attack   | Demonstration login page styled after Instagram.                                               |
+| **06** | Mini RAT              | Attack   | Experimental client-server command system demonstrating remote command execution architecture. |
+| **07** | Nitro Generator       | Attack   | Generates random Discord Nitro-style codes for demonstration purposes.                         |
+| **08** | Bot Deleter (Discord) | Attack   | Utility designed to manage or remove bots from a Discord server environment.                   |
+| **09** | Stealer (ngrok)       | Attack   | Demonstration data-collection endpoint exposed through an ngrok tunnel.                        |
+| **10** | Stealer (Discord)     | Attack   | Demonstration module showing how authentication tokens could be collected and transmitted.     |
+| **11** | Username Tracker      | OSINT    | Searches multiple websites for a specific username.                                            |
+| **12** | Phone Tracker         | OSINT    | Retrieves metadata from phone numbers such as carrier and country.                             |
+| **13** | Email Tracker         | OSINT    | Checks whether an email address appears on certain services.                                   |
+| **14** | ID Tracker            | OSINT    | Attempts to locate a user ID across supported platforms.                                       |
+| **15** | Bot Controller        | OSINT    | Command-line interface used to control connected bots or agents.                               |
+| **16** | Metadata for Image    | OSINT    | Extracts EXIF metadata from image files.                                                       |
+| **17** | Create Report         | OSINT    | Generates structured reports containing gathered information.                                  |
+| **18** | Google Dork           | OSINT    | Generates advanced search queries for finding publicly indexed information.                    |
+| **19** | TechInt               | OSINT    | Detects technologies used by a website (hosting, CMS, server stack).                           |
+| **20** | Directory Fuzzer      | OSINT    | Attempts to discover hidden directories on a web server.                                       |
+| **21** | XSS Search            | Pentest  | Tests web pages for possible Cross-Site Scripting vulnerabilities.                             |
+| **22** | SQL Search            | Pentest  | Tests forms and URLs for SQL injection vulnerabilities.                                        |
+| **23** | Vulnerability Search  | Pentest  | Searches known vulnerability databases related to detected technologies.                       |
+| **24** | Scanner Web           | Pentest  | Performs a general security scan of a target website.                                          |
+| **25** | Alt-Scan              | Pentest  | Additional scanning module used for network or website analysis.                               |
+| **26** | Wifi-Scanner          | Pentest  | Scans nearby Wi-Fi networks and displays available information.                                |
+| **27** | FireWall Search       | Pentest  | Attempts to detect firewall or web-application-firewall technologies.                          |
+| **28** | File Scan             | Pentest  | Scans files for suspicious patterns or potential malware signatures.                           |
+| **29** | Update                | Utility  | nothing for now.                                                              |
+| **30** | Contact               | Utility  | My contact.                                                |
+
+---
 
 
-## 📦 Installation
+
+
+
+## ⚙️ Installation
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/cameleonnbss/z-tool
+cd z-tool
+pip install -r requirements.txt
+```
+
+If installing manually:
 
 ```bash
 pip install phonenumbers
@@ -55,48 +112,69 @@ pip install discord.py
 pip install flask
 pip install colorama
 pip install pillow
-pip install PyInstaller
+pip install pyinstaller
 pip install pyngrok
-pip install PyQt5
+pip install pyqt5
 pip install beautifulsoup4
 pip install reportlab
 pip install python-magic-bin
 pip install pefile
 pip install lxml
 pip install urllib3
-pip install PyPDF2
+pip install pypdf2
 pip install pywin32
 pip install cryptography
-pip install psutil default, but keep the file in case)
-pip install -r requirements.txt
+pip install psutil
 ```
-just launch the "z-toolV1.PY" script
-
 
 ---
 
-## 🎓 Educational Value
+## ▶ Running the Tool
 
-working in a terminal
+Launch the main script:
 
+```bash
+python z-toolV1.py
+```
+
+You will see the **terminal menu** where you can select tools from **01 to 30**.
 
 ---
 
-## 📜 Credits
+## 🎓 Educational Purpose
 
-> Majority of the assets were provided by **AltWolf**.
+This project exists to help practice:
+
+* Python scripting
+* terminal-based tools
+* networking concepts
+* OSINT techniques
+* basic security testing workflows
+
+---
+
+## 🙏 Credits
+
+Many assets and design were provided by:
+
+**AltWolf**
 
 ---
 
 ## ⚖️ Disclaimer
 
-*This tool is intended for training and educational use only.  
-I am not responsible for any consequences that arise from its usage.*
+This project is provided **for educational and ethical research purposes only**.
+
+Do **not** use this software against systems or individuals without explicit authorization.
+
+The author assumes **no responsibility for misuse or damages** caused by this tool.
 
 ---
 
-## 📝 License
+## 📄 License
 
-MIT © 2026 camzzz  
+MIT License
+© 2026 camzzz
 
 ---
+
